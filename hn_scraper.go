@@ -48,7 +48,7 @@ func WriteToFile(link string) {
 
 }
 func CheckLink(link string) bool {
-	f, err := os.OpenFile("linkcheck.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f, err := os.Open("linkcheck.txt")
 	if err != nil {
 		log.Fatalln("[ - ] Can't open file --> " + err.Error())
 	}
